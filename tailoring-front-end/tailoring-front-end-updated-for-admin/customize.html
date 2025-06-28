@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Order - Elegant Tailoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="customize-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fas fa-scissors logo-icon"></i>
+                    <span class="logo-text">Elegant<span>Tailoring</span></span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Category <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="sub-dropdown">
+                                <a href="#" class="sub-dropbtn">Blouse <i class="fas fa-chevron-right"></i></a>
+                                <div class="sub-dropdown-content">
+                                    <a href="normal-blouse.html">Normal Blouse</a>
+                                    <a href="lining-blouse.html">Lining Blouse</a>
+                                </div>
+                            </div>
+                            <a href="chudithar.html">Chudithar</a>
+                            <a href="uniform.html">Uniform</a>
+                            <a href="artwork.html">Artwork Design</a>
+                            <a href="embroidery.html">Embroidery</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#reviews">Customer Reviews</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li class="login-btn-container"><a href="#login" class="login-btn"><span>Sign In / Login</span></a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Toggle dark mode">
+                    <label for="theme-switch" class="theme-switch-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <div class="container">
+                <a href="index.html">Home</a> / 
+                <a href="product-page.html">Product</a> / 
+                <span>Customize</span>
+            </div>
+        </div>
+
+        <!-- Customize Section -->
+        <section class="customize-section">
+            <div class="container">
+                <h1>Customize Your Order</h1>
+                <p class="section-description">Please provide your details and measurements to customize your order.</p>
+                
+                <div class="customize-grid">
+                    <!-- Product Summary -->
+                    <div class="product-summary">
+                        <h2>Order Summary</h2>
+                        <div class="product-summary-content">
+                            <div class="product-image">
+                                <img id="product-image" src="https://via.placeholder.com/300x400" alt="Product Image">
+                            </div>
+                            <div class="product-info">
+                                <h3 id="product-name">Designer Lining Blouse</h3>
+                                <div class="product-details">
+                                    <p><strong>Price:</strong> <span id="product-price">₹1,200</span></p>
+                                    <p><strong>Fabric:</strong> <span id="product-fabric">Silk</span></p>
+                                    <p><strong>Color:</strong> <span id="product-color"><span class="color-dot"></span> Red</span></p>
+                                    <p><strong>Quantity:</strong> <span id="product-quantity">1</span></p>
+                                </div>
+                                <div class="total-price">
+                                    <p><strong>Total:</strong> <span id="total-price">₹1,200</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customization Form -->
+                    <div class="customize-form-container">
+                        <form id="customize-form" class="customize-form">
+                            <div class="form-section">
+                                <h3>Customer Information</h3>
+                                <div class="form-group">
+                                    <label for="customer-name">Full Name <span class="required">*</span></label>
+                                    <input type="text" id="customer-name" name="customer_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="customer-phone">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="customer-phone" name="customer-phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="customer-email">Email Address</label>
+                                    <input type="email" id="customer-email" name="customer-email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="customer-address">Delivery Address <span class="required">*</span></label>
+                                    <textarea id="customer-address" name="customer-address" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Measurements</h3>
+                                <div class="measurements-grid">
+                                    <div class="form-group">
+                                        <label for="measurement-chest">Chest (inches) <span class="required">*</span></label>
+                                        <input type="number" id="measurement-chest" name="measurement-chest" step="0.1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="measurement-waist">Waist (inches) <span class="required">*</span></label>
+                                        <input type="number" id="measurement-waist" name="measurement-waist" step="0.1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="measurement-shoulder">Shoulder (inches) <span class="required">*</span></label>
+                                        <input type="number" id="measurement-shoulder" name="measurement-shoulder" step="0.1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="measurement-sleeve">Sleeve Length (inches) <span class="required">*</span></label>
+                                        <input type="number" id="measurement-sleeve" name="measurement-sleeve" step="0.1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="measurement-length">Blouse Length (inches) <span class="required">*</span></label>
+                                        <input type="number" id="measurement-length" name="measurement-length" step="0.1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="measurement-neck">Neck Depth (inches) <span class="required">*</span></label>
+                                        <input type="number" id="measurement-neck" name="measurement-neck" step="0.1" required>
+                                    </div>
+                                </div>
+                                <div class="measurement-guide">
+                                    <p><i class="fas fa-ruler"></i> Not sure how to measure? <a href="#" id="show-measurement-guide">View Measurement Guide</a></p>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Design Customization</h3>
+                                <div class="form-group">
+                                    <label for="neck-design">Neck Design</label>
+                                    <select id="neck-design" name="neck-design">
+                                        <option value="round">Round Neck</option>
+                                        <option value="v-neck">V Neck</option>
+                                        <option value="square">Square Neck</option>
+                                        <option value="boat">Boat Neck</option>
+                                        <option value="collar">Collar Neck</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sleeve-design">Sleeve Design</label>
+                                    <select id="sleeve-design" name="sleeve-design">
+                                        <option value="regular">Regular Sleeve</option>
+                                        <option value="cap">Cap Sleeve</option>
+                                        <option value="sleeveless">Sleeveless</option>
+                                        <option value="puff">Puff Sleeve</option>
+                                        <option value="bell">Bell Sleeve</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="back-design">Back Design</label>
+                                    <select id="back-design" name="back-design">
+                                        <option value="regular">Regular Back</option>
+                                        <option value="deep-u">Deep U Back</option>
+                                        <option value="deep-v">Deep V Back</option>
+                                        <option value="tie-back">Tie Back</option>
+                                        <option value="princess-cut">Princess Cut</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="additional-notes">Additional Notes or Requirements</label>
+                                    <textarea id="additional-notes" name="additional-notes" placeholder="Any specific design elements or requirements you'd like to add..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" id="back-to-product" class="secondary-btn">Back to Product</button>
+                                <button type="submit" id="proceed-to-payment" class="primary-btn">Proceed to Payment</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Measurement Guide Modal -->
+        <div id="measurement-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>How to Take Measurements</h2>
+                <div class="measurement-instructions">
+                    <div class="measurement-item">
+                        <h3>Chest</h3>
+                        <p>Measure around the fullest part of your chest, keeping the tape measure parallel to the floor.</p>
+                        <img src="https://via.placeholder.com/300x200?text=Chest+Measurement" alt="Chest Measurement">
+                    </div>
+                    <div class="measurement-item">
+                        <h3>Waist</h3>
+                        <p>Measure around your natural waistline, keeping the tape measure comfortably loose.</p>
+                        <img src="https://via.placeholder.com/300x200?text=Waist+Measurement" alt="Waist Measurement">
+                    </div>
+                    <div class="measurement-item">
+                        <h3>Shoulder</h3>
+                        <p>Measure from the edge of one shoulder to the edge of the other shoulder.</p>
+                        <img src="https://via.placeholder.com/300x200?text=Shoulder+Measurement" alt="Shoulder Measurement">
+                    </div>
+                    <div class="measurement-item">
+                        <h3>Sleeve Length</h3>
+                        <p>Measure from the shoulder edge to your desired sleeve length.</p>
+                        <img src="https://via.placeholder.com/300x200?text=Sleeve+Measurement" alt="Sleeve Measurement">
+                    </div>
+                    <div class="measurement-item">
+                        <h3>Blouse Length</h3>
+                        <p>Measure from the highest point of the shoulder to your desired blouse length.</p>
+                        <img src="https://via.placeholder.com/300x200?text=Length+Measurement" alt="Length Measurement">
+                    </div>
+                    <div class="measurement-item">
+                        <h3>Neck Depth</h3>
+                        <p>Measure from the base of the neck to your desired neckline depth.</p>
+                        <img src="https://via.placeholder.com/300x200?text=Neck+Measurement" alt="Neck Measurement">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-scissors logo-icon"></i>
+                <span class="logo-text">Elegant<span>Tailoring</span></span>
+                <p>Crafting perfect fits for your style</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Elegant Tailoring Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="customize-script.js"></script>
+</body>
+</html>

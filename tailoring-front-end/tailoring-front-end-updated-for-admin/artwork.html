@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork Design - Elegant Tailoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fas fa-scissors logo-icon"></i>
+                    <span class="logo-text">Elegant<span>Tailoring</span></span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Category <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="sub-dropdown">
+                                <a href="#" class="sub-dropbtn">Blouse <i class="fas fa-chevron-right"></i></a>
+                                <div class="sub-dropdown-content">
+                                    <a href="normal-blouse.html">Normal Blouse</a>
+                                    <a href="product-page.html">Lining Blouse</a>
+                                </div>
+                            </div>
+                            <a href="chudithar.html">Chudithar</a>
+                            <a href="uniform.html">Uniform</a>
+                            <a href="artwork.html">Artwork Design</a>
+                            <a href="embroidery.html">Embroidery</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#reviews">Customer Reviews</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li class="login-btn-container"><a href="#login" class="login-btn"><span>Sign In / Login</span></a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Toggle dark mode">
+                    <label for="theme-switch" class="theme-switch-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <div class="container">
+                <a href="index.html">Home</a> / 
+                <span>Artwork Design</span>
+            </div>
+        </div>
+
+        <!-- Product Display Section -->
+        <section class="product-display">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- Product Images -->
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img id="main-product-image" src="https://via.placeholder.com/600x800" alt="Artwork Design">
+                        </div>
+                        <div class="image-gallery">
+                            <div class="thumbnail active" data-angle="front">
+                                <img src="https://via.placeholder.com/150x200" alt="Front View">
+                            </div>
+                            <div class="thumbnail" data-angle="side">
+                                <img src="https://via.placeholder.com/150x200?text=Side" alt="Side View">
+                            </div>
+                            <div class="thumbnail" data-angle="back">
+                                <img src="https://via.placeholder.com/150x200?text=Back" alt="Back View">
+                            </div>
+                            <div class="thumbnail" data-angle="detail">
+                                <img src="https://via.placeholder.com/150x200?text=Detail" alt="Detail View">
+                            </div>
+                        </div>
+                        <div class="image-controls">
+                            <button id="rotate-left"><i class="fas fa-undo"></i></button>
+                            <button id="rotate-right"><i class="fas fa-redo"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="product-details">
+                        <h1>Custom Artwork Design</h1>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(36 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹2,500</span>
+                            <span class="original-price">₹3,000</span>
+                            <span class="discount">17% off</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Custom artwork design service for your garments. Our skilled artists create beautiful, unique designs that can be applied to any fabric. Perfect for adding a personal touch to your clothing.</p>
+                        </div>
+                        <div class="product-features">
+                            <h3>Features:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Custom hand-drawn designs</li>
+                                <li><i class="fas fa-check"></i> High-quality fabric paints</li>
+                                <li><i class="fas fa-check"></i> Washable and durable</li>
+                                <li><i class="fas fa-check"></i> Unique personalized artwork</li>
+                                <li><i class="fas fa-check"></i> Multiple design options</li>
+                            </ul>
+                        </div>
+                        <div class="product-variants">
+                            <div class="variant-group">
+                                <h3>Design Type:</h3>
+                                <div class="variant-options">
+                                    <button class="variant-btn active">Floral</button>
+                                    <button class="variant-btn">Abstract</button>
+                                    <button class="variant-btn">Traditional</button>
+                                </div>
+                            </div>
+                            <div class="variant-group">
+                                <h3>Color Palette:</h3>
+                                <div class="color-options">
+                                    <button class="color-btn active" style="background-color: #e91e63;"></button>
+                                    <button class="color-btn" style="background-color: #3f51b5;"></button>
+                                    <button class="color-btn" style="background-color: #4caf50;"></button>
+                                    <button class="color-btn" style="background-color: #ff9800;"></button>
+                                    <button class="color-btn" style="background-color: #9c27b0;"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button id="decrease-quantity">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button id="increase-quantity">+</button>
+                            </div>
+                            <button id="add-to-cart" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="delivery-info">
+                            <p><i class="fas fa-truck"></i> Delivery within 14-21 days</p>
+                            <p><i class="fas fa-undo"></i> Easy returns within 30 days</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Details Tabs -->
+                <div class="product-tabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="description">Description</button>
+                        <button class="tab-btn" data-tab="specifications">Specifications</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="description">
+                            <h3>Product Description</h3>
+                            <p>Our custom artwork design service brings your vision to life on fabric. Our team of skilled artists work closely with you to create beautiful, unique designs that reflect your personal style and preferences.</p>
+                            <p>Each design is hand-drawn and carefully applied to your chosen garment using high-quality fabric paints that are washable and durable. The result is a one-of-a-kind piece that stands out from mass-produced clothing.</p>
+                            <p>Whether you're looking for a subtle accent or a bold statement piece, our artwork design service can accommodate your needs. Choose from various design styles including floral, abstract, and traditional patterns, or provide your own concept for our artists to work with.</p>
+                        </div>
+                        <div class="tab-pane" id="specifications">
+                            <h3>Service Specifications</h3>
+                            <table class="specs-table">
+                                <tr>
+                                    <td>Design Types</td>
+                                    <td>Floral, Abstract, Traditional, Custom</td>
+                                </tr>
+                                <tr>
+                                    <td>Paint Type</td>
+                                    <td>Premium fabric paint</td>
+                                </tr>
+                                <tr>
+                                    <td>Applicable Fabrics</td>
+                                    <td>Cotton, Silk, Polyester, Denim</td>
+                                </tr>
+                                <tr>
+                                    <td>Durability</td>
+                                    <td>Washable, Color-fast</td>
+                                </tr>
+                                <tr>
+                                    <td>Process Time</td>
+                                    <td>10-15 days (design and application)</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tab-pane" id="reviews">
+                            <h3>Customer Reviews</h3>
+                            <div class="review-summary">
+                                <div class="average-rating">
+                                    <span class="rating-number">4.5</span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="total-reviews">Based on 36 reviews</span>
+                                </div>
+                                <div class="rating-bars">
+                                    <div class="rating-bar">
+                                        <span>5 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 70%;"></div>
+                                        </div>
+                                        <span>70%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>4 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 20%;"></div>
+                                        </div>
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>3 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 5%;"></div>
+                                        </div>
+                                        <span>5%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>2 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 3%;"></div>
+                                        </div>
+                                        <span>3%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>1 Star</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 2%;"></div>
+                                        </div>
+                                        <span>2%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customer-reviews">
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <h4>Anita M.</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="review-date">1 month ago</span>
+                                    </div>
+                                    <p>The custom design turned out better than I expected! The artist captured my vision perfectly and the colors are vibrant even after washing.</p>
+                                </div>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <h4>Vikram S.</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="review-date">2 months ago</span>
+                                    </div>
+                                    <p>Got a traditional design for my wife's saree and she loves it. The artwork is detailed and beautiful. Only giving 4 stars because it took longer than expected.</p>
+                                </div>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <h4>Meena R.</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="review-date">3 months ago</span>
+                                    </div>
+                                    <p>Absolutely stunning work! I had a floral design created for my blouse and it's a conversation starter everywhere I go. Worth every rupee!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Products -->
+                <div class="related-products">
+                    <h2>You May Also Like</h2>
+                    <div class="product-carousel">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 1">
+                            <h3>Embroidery Service</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="price">₹1,800</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 2">
+                            <h3>Designer Blouse</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="price">₹1,200</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 3">
+                            <h3>Custom Saree Design</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="price">₹3,500</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 4">
+                            <h3>Traditional Artwork</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="price">₹2,200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-scissors logo-icon"></i>
+                <span class="logo-text">Elegant<span>Tailoring</span></span>
+                <p>Crafting perfect fits for your style</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Elegant Tailoring Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="product-script.js"></script>
+</body>
+</html>

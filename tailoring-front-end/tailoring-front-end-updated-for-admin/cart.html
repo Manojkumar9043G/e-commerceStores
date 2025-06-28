@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Elegant Tailoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Cart Page Specific Styles */
+        .cart-section {
+            padding: 40px 0;
+        }
+        
+        .cart-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .cart-header h1 {
+            font-size: 28px;
+            color: var(--text-color);
+        }
+        
+        .cart-tabs {
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+        
+        .cart-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border-bottom: 2px solid transparent;
+            transition: var(--transition);
+        }
+        
+        .cart-tab.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+        
+        .cart-content {
+            display: none;
+        }
+        
+        .cart-content.active {
+            display: block;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            padding: 50px 0;
+        }
+        
+        .empty-cart i {
+            font-size: 60px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        
+        .empty-cart h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .empty-cart p {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+        
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .cart-item {
+            display: flex;
+            background-color: var(--bg-card);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .cart-item-image {
+            width: 120px;
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+        
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .cart-item-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .cart-item-info {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .cart-item-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--text-color);
+        }
+        
+        .cart-item-variant {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        
+        .cart-item-price {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+        
+        .cart-item-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .quantity-control button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .quantity-control button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .quantity-control span {
+            font-weight: 500;
+        }
+        
+        .cart-item-remove {
+            color: var(--danger-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .cart-item-remove:hover {
+            text-decoration: underline;
+        }
+        
+        .cart-summary {
+            background-color: var(--bg-card);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+        
+        .cart-summary h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 18px;
+            padding-top: 15px;
+            margin-top: 15px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+        
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .checkout-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .continue-shopping {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .continue-shopping i {
+            margin-right: 5px;
+        }
+        
+        .continue-shopping:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        .order-history-item {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .order-id {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .order-date {
+            color: var(--text-secondary);
+        }
+        
+        .order-status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .order-status.completed {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .order-items {
+            margin-bottom: 15px;
+        }
+        
+        .order-total {
+            text-align: right;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        /* Responsive styles */
+        @media (min-width: 768px) {
+            .cart-container {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            
+            .cart-items-container {
+                flex: 2;
+            }
+            
+            .cart-summary {
+                flex: 1;
+                position: sticky;
+                top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fas fa-scissors logo-icon"></i>
+                    <span class="logo-text">Elegant<span>Tailoring</span></span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Category <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="sub-dropdown">
+                                <a href="#" class="sub-dropbtn">Blouse <i class="fas fa-chevron-right"></i></a>
+                                <div class="sub-dropdown-content">
+                                    <a href="normal-blouse.html">Normal Blouse</a>
+                                    <a href="product-page.html">Lining Blouse</a>
+                                </div>
+                            </div>
+                            <a href="chudithar.html">Chudithar</a>
+                            <a href="uniform.html">Uniform</a>
+                            <a href="artwork.html">Artwork Design</a>
+                            <a href="embroidery.html">Embroidery</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#reviews">Customer Reviews</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li class="login-btn-container"><a href="#login" class="login-btn"><span>Sign In / Login</span></a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Toggle dark mode">
+                    <label for="theme-switch" class="theme-switch-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <div class="container">
+                <a href="index.html">Home</a> / 
+                <span>Shopping Cart</span>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <section class="cart-section">
+            <div class="container">
+                <div class="cart-header">
+                    <h1>Your Shopping Cart</h1>
+                </div>
+                
+                <div class="cart-tabs">
+                    <div class="cart-tab active" data-tab="cart">Cart</div>
+                    <div class="cart-tab" data-tab="history">Order History</div>
+                </div>
+                
+                <div class="cart-content active" id="cart-content">
+                    <div class="cart-container">
+                        <div class="cart-items-container">
+                            <div id="cart-items" class="cart-items">
+                                <!-- Cart items will be dynamically added here -->
+                            </div>
+                            
+                            <div id="empty-cart" class="empty-cart" style="display: none;">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h3>Your cart is empty</h3>
+                                <p>Looks like you haven't added any items to your cart yet.</p>
+                                <a href="index.html" class="cta-button"><span>Start Shopping</span></a>
+                            </div>
+                            
+                            <a href="index.html" class="continue-shopping">
+                                <i class="fas fa-arrow-left"></i> Continue Shopping
+                            </a>
+                        </div>
+                        
+                        <div class="cart-summary">
+                            <h3>Order Summary</h3>
+                            <div class="summary-item">
+                                <span>Subtotal</span>
+                                <span id="subtotal">₹0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Delivery Charges</span>
+                                <span class="free">FREE</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Tax</span>
+                                <span id="tax">₹0</span>
+                            </div>
+                            <div class="summary-total">
+                                <span>Total</span>
+                                <span id="total">₹0</span>
+                            </div>
+                            <a href="#" id="checkout-btn" class="checkout-btn">Proceed to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cart-content" id="history-content">
+                    <div id="order-history">
+                        <!-- Order history will be dynamically added here -->
+                    </div>
+                    
+                    <div id="empty-history" class="empty-cart">
+                        <i class="fas fa-history"></i>
+                        <h3>No order history</h3>
+                        <p>You haven't placed any orders yet.</p>
+                        <a href="index.html" class="cta-button"><span>Start Shopping</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-scissors logo-icon"></i>
+                <span class="logo-text">Elegant<span>Tailoring</span></span>
+                <p>Crafting perfect fits for your style</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Elegant Tailoring Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+                    if (localStorage.getItem('orderHistory')) {

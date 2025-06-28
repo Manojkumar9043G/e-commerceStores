@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniform - Elegant Tailoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fas fa-scissors logo-icon"></i>
+                    <span class="logo-text">Elegant<span>Tailoring</span></span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Category <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="sub-dropdown">
+                                <a href="#" class="sub-dropbtn">Blouse <i class="fas fa-chevron-right"></i></a>
+                                <div class="sub-dropdown-content">
+                                    <a href="normal-blouse.html">Normal Blouse</a>
+                                    <a href="product-page.html">Lining Blouse</a>
+                                </div>
+                            </div>
+                            <a href="chudithar.html">Chudithar</a>
+                            <a href="uniform.html">Uniform</a>
+                            <a href="artwork.html">Artwork Design</a>
+                            <a href="embroidery.html">Embroidery</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#reviews">Customer Reviews</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li class="login-btn-container"><a href="#login" class="login-btn"><span>Sign In / Login</span></a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Toggle dark mode">
+                    <label for="theme-switch" class="theme-switch-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <div class="container">
+                <a href="index.html">Home</a> / 
+                <span>Uniform</span>
+            </div>
+        </div>
+
+        <!-- Product Display Section -->
+        <section class="product-display">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- Product Images -->
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img id="main-product-image" src="https://via.placeholder.com/600x800" alt="Uniform">
+                        </div>
+                        <div class="image-gallery">
+                            <div class="thumbnail active" data-angle="front">
+                                <img src="https://via.placeholder.com/150x200" alt="Front View">
+                            </div>
+                            <div class="thumbnail" data-angle="side">
+                                <img src="https://via.placeholder.com/150x200?text=Side" alt="Side View">
+                            </div>
+                            <div class="thumbnail" data-angle="back">
+                                <img src="https://via.placeholder.com/150x200?text=Back" alt="Back View">
+                            </div>
+                            <div class="thumbnail" data-angle="detail">
+                                <img src="https://via.placeholder.com/150x200?text=Detail" alt="Detail View">
+                            </div>
+                        </div>
+                        <div class="image-controls">
+                            <button id="rotate-left"><i class="fas fa-undo"></i></button>
+                            <button id="rotate-right"><i class="fas fa-redo"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="product-details">
+                        <h1>Professional School Uniform</h1>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(52 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹1,200</span>
+                            <span class="original-price">₹1,500</span>
+                            <span class="discount">20% off</span>
+                        </div>
+                        <div class="product-description">
+                            <p>High-quality school uniform with durable fabric and comfortable fit. Perfect for daily wear with excellent stitching quality and attention to detail.</p>
+                        </div>
+                        <div class="product-features">
+                            <h3>Features:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Durable polyester-cotton blend</li>
+                                <li><i class="fas fa-check"></i> Wrinkle-resistant fabric</li>
+                                <li><i class="fas fa-check"></i> Comfortable fit</li>
+                                <li><i class="fas fa-check"></i> Reinforced stitching</li>
+                                <li><i class="fas fa-check"></i> Customizable size and design</li>
+                            </ul>
+                        </div>
+                        <div class="product-variants">
+                            <div class="variant-group">
+                                <h3>Uniform Type:</h3>
+                                <div class="variant-options">
+                                    <button class="variant-btn active">School</button>
+                                    <button class="variant-btn">College</button>
+                                    <button class="variant-btn">Corporate</button>
+                                </div>
+                            </div>
+                            <div class="variant-group">
+                                <h3>Color:</h3>
+                                <div class="color-options">
+                                    <button class="color-btn active" style="background-color: #1a237e;"></button>
+                                    <button class="color-btn" style="background-color: #1b5e20;"></button>
+                                    <button class="color-btn" style="background-color: #b71c1c;"></button>
+                                    <button class="color-btn" style="background-color: #f57f17;"></button>
+                                    <button class="color-btn" style="background-color: #212121;"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button id="decrease-quantity">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button id="increase-quantity">+</button>
+                            </div>
+                            <button id="add-to-cart" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="delivery-info">
+                            <p><i class="fas fa-truck"></i> Free delivery within 7-10 days</p>
+                            <p><i class="fas fa-undo"></i> Easy returns within 30 days</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Details Tabs -->
+                <div class="product-tabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="description">Description</button>
+                        <button class="tab-btn" data-tab="specifications">Specifications</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="description">
+                            <h3>Product Description</h3>
+                            <p>Our professional school uniforms are designed with durability and comfort in mind. Made from high-quality polyester-cotton blend fabric, these uniforms are perfect for daily wear throughout the school year.</p>
+                            <p>The fabric is wrinkle-resistant and easy to maintain, saving time on ironing and care. The reinforced stitching ensures that the uniform withstands regular wear and washing without losing its shape or appearance.</p>
+                            <p>Customize the uniform according to your school's specifications and your child's measurements for a perfect fit. We offer various options for embroidery of school logos and name badges.</p>
+                        </div>
+                        <div class="tab-pane" id="specifications">
+                            <h3>Product Specifications</h3>
+                            <table class="specs-table">
+                                <tr>
+                                    <td>Material</td>
+                                    <td>65% Polyester, 35% Cotton</td>
+                                </tr>
+                                <tr>
+                                    <td>Set Includes</td>
+                                    <td>Shirt/Top, Pants/Skirt</td>
+                                </tr>
+                                <tr>
+                                    <td>Sizes Available</td>
+                                    <td>All standard sizes (customizable)</td>
+                                </tr>
+                                <tr>
+                                    <td>Logo Options</td>
+                                    <td>Embroidered or printed</td>
+                                </tr>
+                                <tr>
+                                    <td>Care Instructions</td>
+                                    <td>Machine washable, Tumble dry low</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tab-pane" id="reviews">
+                            <h3>Customer Reviews</h3>
+                            <div class="review-summary">
+                                <div class="average-rating">
+                                    <span class="rating-number">5.0</span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="total-reviews">Based on 52 reviews</span>
+                                </div>
+                                <div class="rating-bars">
+                                    <div class="rating-bar">
+                                        <span>5 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 90%;"></div>
+                                        </div>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>4 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 8%;"></div>
+                                        </div>
+                                        <span>8%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>3 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 2%;"></div>
+                                        </div>
+                                        <span>2%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>2 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%;"></div>
+                                        </div>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>1 Star</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%;"></div>
+                                        </div>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customer-reviews">
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <h4>Rajesh K.</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="review-date">1 month ago</span>
+                                    </div>
+                                    <p>Excellent quality uniforms for my kids. The fabric is durable and doesn't fade even after multiple washes. Perfect stitching and comfortable fit.</p>
+                                </div>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <h4>Sunita M.</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="review-date">2 months ago</span>
+                                    </div>
+                                    <p>Ordered uniforms for the entire class and everyone is very happy with the quality. The customization options are great and delivery was on time.</p>
+                                </div>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <h4>Arun P.</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="review-date">3 months ago</span>
+                                    </div>
+                                    <p>The uniform fabric is very comfortable and durable. My daughter loves wearing it. Will definitely order again next year.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Products -->
+                <div class="related-products">
+                    <h2>You May Also Like</h2>
+                    <div class="product-carousel">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 1">
+                            <h3>College Uniform</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="price">₹1,400</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 2">
+                            <h3>Corporate Uniform</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="price">₹1,800</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 3">
+                            <h3>Sports Uniform</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="price">₹1,100</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 4">
+                            <h3>Preschool Uniform</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="price">₹950</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-scissors logo-icon"></i>
+                <span class="logo-text">Elegant<span>Tailoring</span></span>
+                <p>Crafting perfect fits for your style</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Elegant Tailoring Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="product-script.js"></script>
+</body>
+</html>

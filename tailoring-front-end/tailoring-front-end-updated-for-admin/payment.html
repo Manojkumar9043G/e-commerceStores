@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Elegant Tailoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="payment-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fas fa-scissors logo-icon"></i>
+                    <span class="logo-text">Elegant<span>Tailoring</span></span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Category <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="sub-dropdown">
+                                <a href="#" class="sub-dropbtn">Blouse <i class="fas fa-chevron-right"></i></a>
+                                <div class="sub-dropdown-content">
+                                    <a href="normal-blouse.html">Normal Blouse</a>
+                                    <a href="lining-blouse.html">Lining Blouse</a>
+                                </div>
+                            </div>
+                            <a href="chudithar.html">Chudithar</a>
+                            <a href="uniform.html">Uniform</a>
+                            <a href="artwork.html">Artwork Design</a>
+                            <a href="embroidery.html">Embroidery</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#reviews">Customer Reviews</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li class="login-btn-container"><a href="#login" class="login-btn"><span>Sign In / Login</span></a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Toggle dark mode">
+                    <label for="theme-switch" class="theme-switch-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <div class="container">
+                <a href="index.html">Home</a> / 
+                <a href="product-page.html">Product</a> / 
+                <a href="customize.html">Customize</a> / 
+                <span>Payment</span>
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <section class="payment-section">
+            <div class="container">
+                <h1>Complete Your Order</h1>
+                <p class="section-description">Please select your preferred payment method to complete your order.</p>
+                
+                <div class="payment-grid">
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        <div class="order-details">
+                            <div class="product-info">
+                                <div class="product-image">
+                                    <img id="product-image" src="https://via.placeholder.com/150x200" alt="Product Image">
+                                </div>
+                                <div class="product-details">
+                                    <h3 id="product-name">Designer Lining Blouse</h3>
+                                    <p id="product-fabric">Fabric: Silk</p>
+                                    <p id="product-color">Color: <span class="color-dot"></span> Red</p>
+                                    <p id="product-quantity">Quantity: 1</p>
+                                </div>
+                            </div>
+                            
+                            <div class="customer-info">
+                                <h3>Customer Details</h3>
+                                <p id="customer-name">Name: John Doe</p>
+                                <p id="customer-phone">Phone: +91 98765 43210</p>
+                                <p id="customer-email">Email: john@example.com</p>
+                            </div>
+                            
+                            <div class="price-breakdown">
+                                <h3>Price Details</h3>
+                                <div class="price-item">
+                                    <span>Product Price</span>
+                                    <span id="product-price">₹1,200</span>
+                                </div>
+                                <div class="price-item">
+                                    <span>Quantity</span>
+                                    <span id="quantity">1</span>
+                                </div>
+                                <div class="price-item">
+                                    <span>Delivery Charges</span>
+                                    <span class="free">FREE</span>
+                                </div>
+                                <div class="price-item total">
+                                    <span>Total Amount</span>
+                                    <span id="total-price">₹1,200</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Options -->
+                    <div class="payment-options">
+                        <h2>Payment Method</h2>
+                        <form id="payment-form" class="payment-form">
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <input type="radio" id="upi" name="payment-method" value="upi" checked>
+                                    <label for="upi">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <span>UPI</span>
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="card" name="payment-method" value="card">
+                                    <label for="card">
+                                        <i class="far fa-credit-card"></i>
+                                        <span>Credit/Debit Card</span>
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="netbanking" name="payment-method" value="netbanking">
+                                    <label for="netbanking">
+                                        <i class="fas fa-university"></i>
+                                        <span>Net Banking</span>
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="cod" name="payment-method" value="cod">
+                                    <label for="cod">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <span>Cash on Delivery</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- UPI Payment Form -->
+                            <div class="payment-form-section active" id="upi-form">
+                                <div class="form-group">
+                                    <label for="upi-id">UPI ID <span class="required">*</span></label>
+                                    <input type="text" id="upi-id" name="upi-id" placeholder="yourname@upi" required>
+                                </div>
+                                <div class="form-note">
+                                    <p><i class="fas fa-info-circle"></i> You will receive a payment request on your UPI app.</p>
+                                </div>
+                            </div>
+
+                            <!-- Card Payment Form -->
+                            <div class="payment-form-section" id="card-form">
+                                <div class="form-group">
+                                    <label for="card-number">Card Number <span class="required">*</span></label>
+                                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="card-expiry">Expiry Date <span class="required">*</span></label>
+                                        <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="card-cvv">CVV <span class="required">*</span></label>
+                                        <input type="password" id="card-cvv" name="card-cvv" placeholder="123" maxlength="3">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-name">Name on Card <span class="required">*</span></label>
+                                    <input type="text" id="card-name" name="card-name" placeholder="John Doe">
+                                </div>
+                            </div>
+
+                            <!-- Net Banking Form -->
+                            <div class="payment-form-section" id="netbanking-form">
+                                <div class="form-group">
+                                    <label for="bank-select">Select Bank <span class="required">*</span></label>
+                                    <select id="bank-select" name="bank-select">
+                                        <option value="">Select your bank</option>
+                                        <option value="sbi">State Bank of India</option>
+                                        <option value="hdfc">HDFC Bank</option>
+                                        <option value="icici">ICICI Bank</option>
+                                        <option value="axis">Axis Bank</option>
+                                        <option value="kotak">Kotak Mahindra Bank</option>
+                                        <option value="other">Other Bank</option>
+                                    </select>
+                                </div>
+                                <div class="form-note">
+                                    <p><i class="fas fa-info-circle"></i> You will be redirected to your bank's website to complete the payment.</p>
+                                </div>
+                            </div>
+
+                            <!-- COD Form -->
+                            <div class="payment-form-section" id="cod-form">
+                                <div class="form-note">
+                                    <p><i class="fas fa-info-circle"></i> Pay in cash at the time of delivery. Additional convenience fee of ₹50 will be charged for Cash on Delivery.</p>
+                                </div>
+                                <div class="price-item cod-fee">
+                                    <span>COD Convenience Fee</span>
+                                    <span>₹50</span>
+                                </div>
+                                <div class="price-item total">
+                                    <span>Total Amount</span>
+                                    <span id="cod-total-price">₹1,250</span>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" id="back-to-customize" class="secondary-btn">Back</button>
+                                <button type="submit" id="place-order" class="primary-btn">Place Order</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Confirmation Modal -->
+        <div id="confirmation-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="confirmation-content">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Order Placed Successfully!</h2>
+                    <p>Your order has been placed successfully. You will receive a confirmation email shortly.</p>
+                    <div class="order-info">
+                        <p><strong>Order ID:</strong> <span id="order-id">ETS12345</span></p>
+                        <p><strong>Estimated Delivery:</strong> <span id="delivery-date">Within 7-10 days</span></p>
+                    </div>
+                    <button id="continue-shopping" class="primary-btn">Continue Shopping</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-scissors logo-icon"></i>
+                <span class="logo-text">Elegant<span>Tailoring</span></span>
+                <p>Crafting perfect fits for your style</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Elegant Tailoring Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="payment-script.js"></script>
+</body>
+</html>

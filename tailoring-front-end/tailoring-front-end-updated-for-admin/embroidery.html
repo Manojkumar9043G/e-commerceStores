@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embroidery - Elegant Tailoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fas fa-scissors logo-icon"></i>
+                    <span class="logo-text">Elegant<span>Tailoring</span></span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Category <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="sub-dropdown">
+                                <a href="#" class="sub-dropbtn">Blouse <i class="fas fa-chevron-right"></i></a>
+                                <div class="sub-dropdown-content">
+                                    <a href="normal-blouse.html">Normal Blouse</a>
+                                    <a href="product-page.html">Lining Blouse</a>
+                                </div>
+                            </div>
+                            <a href="chudithar.html">Chudithar</a>
+                            <a href="uniform.html">Uniform</a>
+                            <a href="artwork.html">Artwork Design</a>
+                            <a href="embroidery.html">Embroidery</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#reviews">Customer Reviews</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li class="login-btn-container"><a href="#login" class="login-btn"><span>Sign In / Login</span></a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Toggle dark mode">
+                    <label for="theme-switch" class="theme-switch-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-ball"></span>
+                    </label>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <div class="container">
+                <a href="index.html">Home</a> / 
+                <span>Embroidery</span>
+            </div>
+        </div>
+
+        <!-- Product Display Section -->
+        <section class="product-display">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- Product Images -->
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img id="main-product-image" src="https://via.placeholder.com/600x800" alt="Embroidery">
+                        </div>
+                        <div class="image-gallery">
+                            <div class="thumbnail active" data-angle="front">
+                                <img src="https://via.placeholder.com/150x200" alt="Front View">
+                            </div>
+                            <div class="thumbnail" data-angle="side">
+                                <img src="https://via.placeholder.com/150x200?text=Side" alt="Side View">
+                            </div>
+                            <div class="thumbnail" data-angle="back">
+                                <img src="https://via.placeholder.com/150x200?text=Back" alt="Back View">
+                            </div>
+                            <div class="thumbnail" data-angle="detail">
+                                <img src="https://via.placeholder.com/150x200?text=Detail" alt="Detail View">
+                            </div>
+                        </div>
+                        <div class="image-controls">
+                            <button id="rotate-left"><i class="fas fa-undo"></i></button>
+                            <button id="rotate-right"><i class="fas fa-redo"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="product-details">
+                        <h1>Premium Embroidery Service</h1>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(48 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹2,000</span>
+                            <span class="original-price">₹2,500</span>
+                            <span class="discount">20% off</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Exquisite embroidery service for your garments. Our skilled artisans create intricate, beautiful designs that add elegance and uniqueness to your clothing. Perfect for special occasions and personalized gifts.</p>
+                        </div>
+                        <div class="product-features">
+                            <h3>Features:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Handcrafted precision embroidery</li>
+                                <li><i class="fas fa-check"></i> Premium quality threads</li>
+                                <li><i class="fas fa-check"></i> Washable and durable</li>
+                                <li><i class="fas fa-check"></i> Customizable designs</li>
+                                <li><i class="fas fa-check"></i> Multiple pattern options</li>
+                            </ul>
+                        </div>
+                        <div class="product-variants">
+                            <div class="variant-group">
+                                <h3>Embroidery Type:</h3>
+                                <div class="variant-options">
+                                    <button class="variant-btn active">Zardozi</button>
+                                    <button class="variant-btn">Thread Work</button>
+                                    <button class="variant-btn">Sequin</button>
+                                </div>
+                            </div>
+                            <div class="variant-group">
+                                <h3>Thread Color:</h3>
+                                <div class="color-options">
+                                    <button class="color-btn active" style="background-color: #ffd700;"></button>
+                                    <button class="color-btn" style="background-color: #c0392b;"></button>
+                                    <button class="color-btn" style="background-color: #2980b9;"></button>
+                                    <button class="color-btn" style="background-color: #27ae60;"></button>
+                                    <button class="color-btn" style="background-color: #8e44ad;"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button id="decrease-quantity">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button id="increase-quantity">+</button>
+                            </div>
+                            <button id="add-to-cart" class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                        <div class="delivery-info">
+                            <p><i class="fas fa-truck"></i> Delivery within 14-21 days</p>
+                            <p><i class="fas fa-undo"></i> Easy returns within 30 days</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Details Tabs -->
+                <div class="product-tabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="description">Description</button>
+                        <button class="tab-btn" data-tab="specifications">Specifications</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="description">
+                            <h3>Service Description</h3>
+                            <p>Our premium embroidery service offers exquisite handcrafted designs that transform ordinary garments into extraordinary pieces of art. Each stitch is meticulously placed by our skilled artisans who have years of experience in traditional and modern embroidery techniques.</p>
+                            <p>We offer various embroidery styles including Zardozi (metallic thread work), traditional thread embroidery, and sequin work. Each style brings its own unique character and elegance to your garments.</p>
+                            <p>Whether you're looking to embellish a wedding outfit, add a personal touch to a gift, or create a statement piece for your wardrobe, our embroidery service can be customized to meet your specific requirements and preferences.</p>
+                        </div>
+                        <div class="tab-pane" id="specifications">
+                            <h3>Service Specifications</h3>
+                            <table class="specs-table">
+                                <tr>
+                                    <td>Embroidery Types</td>
+                                    <td>Zardozi, Thread Work, Sequin, Beadwork</td>
+                                </tr>
+                                <tr>
+                                    <td>Thread Quality</td>
+                                    <td>Premium silk, metallic, and cotton threads</td>
+                                </tr>
+                                <tr>
+                                    <td>Applicable Fabrics</td>
+                                    <td>Cotton, Silk, Georgette, Chiffon, Velvet</td>
+                                </tr>
+                                <tr>
+                                    <td>Durability</td>
+                                    <td>Washable with care, Color-fast</td>
+                                </tr>
+                                <tr>
+                                    <td>Process Time</td>
+                                    <td>10-15 days (depending on complexity)</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tab-pane" id="reviews">
+                            <h3>Customer Reviews</h3>
+                            <div class="review-summary">
+                                <div class="average-rating">
+                                    <span class="rating-number">5.0</span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="total-reviews">Based on 48 reviews</span>
+                                </div>
+                                <div class="rating-bars">
+                                    <div class="rating-bar">
+                                        <span>5 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 85%;"></div>
+                                        </div>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>4 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 12%;"></div>
+                                        </div>
+                                        <span>12%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>3 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 3%;"></div>
+                                        </div>
+                                        <span>3%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>2 Stars</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%;"></div>
+                                        </div>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>1 Star</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%;"></div>
+                                        </div>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customer-reviews">
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <h4>Lakshmi N.</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="review-date">1 month ago</span>
+                                    </div>
+                                    <p>The Zardozi embroidery on my wedding blouse is absolutely stunning! Every detail is perfect and the quality is exceptional. Worth every penny!</p>
+                                </div>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <h4>Rahul G.</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="review-date">2 months ago</span>
+                                    </div>
+                                    <p>Got a custom embroidery design for my wife's anniversary gift. The craftsmanship is excellent and she absolutely loved it. Highly recommend!</p>
+                                </div>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <h4>Priya M.</h4>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <span class="review-date">3 months ago</span>
+                                    </div>
+                                    <p>The sequin work on my saree blouse is exquisite. The attention to detail is amazing and the design exactly matched what I had in mind. Will definitely use this service again!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Products -->
+                <div class="related-products">
+                    <h2>You May Also Like</h2>
+                    <div class="product-carousel">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 1">
+                            <h3>Artwork Design Service</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="price">₹2,500</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 2">
+                            <h3>Designer Blouse</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="price">₹1,200</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 3">
+                            <h3>Bridal Embroidery</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="price">₹3,500</p>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300x400" alt="Related Product 4">
+                            <h3>Traditional Chudithar</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="price">₹1,500</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-scissors logo-icon"></i>
+                <span class="logo-text">Elegant<span>Tailoring</span></span>
+                <p>Crafting perfect fits for your style</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Elegant Tailoring Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="product-script.js"></script>
+</body>
+</html>

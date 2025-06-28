@@ -1,0 +1,390 @@
+/* Customize Page Styles */
+
+/* Main Section */
+.customize-section {
+    padding: 40px 0 60px;
+}
+
+.customize-section h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.section-description {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.customize-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+/* Product Summary */
+.product-summary {
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.product-summary h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.product-summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.product-details p {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+}
+
+.color-dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #d32f2f;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.total-price {
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.total-price p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Customization Form */
+.customize-form-container {
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+}
+
+.customize-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Measurements Grid */
+.measurements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.measurement-guide {
+    margin-top: 10px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.measurement-guide a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.measurement-guide i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.secondary-btn {
+    padding: 12px 25px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.secondary-btn:hover {
+    background-color: var(--border-color);
+}
+
+.primary-btn {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.primary-btn:hover::before {
+    left: 100%;
+}
+
+/* Measurement Guide Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 50px 0;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-modal:hover {
+    color: var(--text-color);
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.measurement-instructions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.measurement-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.measurement-item h3 {
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.measurement-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.measurement-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .customize-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-summary {
+        position: static;
+        margin-bottom: 30px;
+    }
+    
+    .product-summary-content {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .product-image {
+        width: 40%;
+    }
+    
+    .product-info {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .measurements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .measurement-instructions {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-summary-content {
+        flex-direction: column;
+    }
+    
+    .product-image,
+    .product-info {
+        width: 100%;
+    }
+    
+    .customize-form-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-actions button {
+        width: 100%;
+    }
+    
+    .secondary-btn {
+        order: 2;
+    }
+    
+    .primary-btn {
+        order: 1;
+    }
+}
